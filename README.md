@@ -26,5 +26,5 @@ This project implements a simple RESTful API for managing categories and items f
 ### Installation
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/inventory-management-api.git
-   cd inventory-management-api
+   git clone https://github.com/your-username/inventory-management.git
+   cd inventory-management
