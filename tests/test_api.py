@@ -13,7 +13,7 @@ class TestInventoryAPI(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
 
     def test_add_category(self):
-        response = requests.post(f'{self.BASE_URL}/categories', json={"name": "New Category"})
+        response = requests.post(f'{self.BASE_URL}/categories', json={"name": "Python"})
         self.assertEqual(response.status_code, 201)
 
     def test_add_item(self):

@@ -2,14 +2,16 @@
 import json
 import http.server
 
+def get_all_items():
+     return {"items": [{"name": "Python"}, {"name": "Python 2"}]}
+
 class MyHandler(http.server.BaseHTTPRequestHandler):
     def do_GET(self):
         if self.path == '/items':
             self.send_response(200)
             self.send_header('Content-type', 'application/json')
             self.end_headers()
-            # Fixed the function call to get all items
-            items = get_all_items()  # Ensure this function is defined
+            items = get_all_items()
             self.wfile.write(json.dumps(items).encode())
         else:
             self.send_response(404)
